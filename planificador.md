@@ -12,7 +12,7 @@ Una vez finalizado el proceso ESI, se lo enviará a una cola de _finalizados_.
 
 Es importante destacar que cada proceso ESI deberá tener un identificador dentro del sistema.
 
-![Planificación](planificacion.png)
+![Planificación](assets/planificacion.png)
 
 ## Algoritmos de Planificación
 
