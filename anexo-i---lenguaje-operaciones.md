@@ -1,8 +1,8 @@
 # Anexo I: Lenguaje - Operaciones
 
-* `SET key value`: Almacena el valor con la clave asociada.
-* `GET key`: Obtiene el valor de la clave asociada cumpliendo con el listado de opciones que se hayan utilizado.
-* `STORE key`: Persiste el valor de la clave asociada en un archivo dentro de la Instancia. Por cada clave persistida se generará un archivo particular conteniendo el valor en texto plano. Esta operación también debe liberar el bloqueo sobre la clave.
+* `SET clave valor`: Almacena el valor con la clave asociada.
+* `GET clave`: Intenta bloquear el valor de la clave asociada.
+* `STORE clave`: Persiste el valor de la clave asociada en un archivo dentro de la Instancia. Por cada clave persistida se generará un archivo particular conteniendo el valor en texto plano. Esta operación también debe liberar el bloqueo sobre la clave.
 
 ## Blocking
 

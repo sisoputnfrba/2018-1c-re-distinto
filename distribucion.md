@@ -16,7 +16,7 @@ El algoritmo LSU se basa en distribuir la ejecución de solicitudes de almacenam
 
 Por último, el algoritmo Key Explicit, define la Instancia que ejecutará cada solicitud de almacenamiento en la Clave misma. Cuando este algoritmo está en uso, se tomará el primer carácter de la clave en minúscula como indicador de Instancia a la que le corresponde la ejecución de la solicitud.
 
-_Consideremos un instante donde existan 4 instancias, la primera instancia será la encargada de almacenar claves que comienzan con las letras "a" a la "g". La segunda instancia de la "h" a la "n". La tercera instancia de la letra "m" hasta la "t", y por último la cuarta instancia de la letra "u" a la "z"[^12]. De agregarse nuevas instancias, las claves previamente almacenadas no se moverán de lugar; pero nuevas claves usarán el nuevo número de instancias para calcular la distribución._
+_Consideremos un instante donde existan 4 instancias, la primera instancia será la encargada de almacenar claves que comienzan con las letras "a" a la "g". La segunda instancia de la "h" a la "m". La tercera instancia de la letra "n" hasta la "t", y por último la cuarta instancia de la letra "u" a la "z"[^12]. De agregarse nuevas instancias, las claves previamente almacenadas no se moverán de lugar; pero nuevas claves usarán el nuevo número de instancias para calcular la distribución._
 
 ## Desconexión
 

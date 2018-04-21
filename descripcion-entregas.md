@@ -25,7 +25,7 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 #### Lectura recomendada:
 
 * http://faq.utnso.com/arrancar
-* Beej Guide to Network Programming - [link](http://beej.us/guide/bgnet/output/html/multipage/index.html)
+* Beej Guide to Network Programming - [link](http://beej.us/guide/bgnet/html/multi/index.html)
 * Linux POSIX Threads - [link](http://www.yolinux.com/TUTORIALS/LinuxTutorialPosixThreads.html)
 * SO UTN FRBA Commons Libraries - [link](https://github.com/sisoputnfrba/so-commons-library)
 * Sistemas Operativos, Silberschatz, Galvin - Capítulo 3: Procesos
