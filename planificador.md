@@ -54,6 +54,6 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 | Claves inicialmente bloqueadas    | [Lista de claves]            | `materias:K3002, materias:K3001` |
 
 ---
-[^2] Esto se puede lograr ejecutando una sycall bloqueante que espere la entrada de un humano.
-[^3] El Planificador empezará con una serie de claves bloqueadas de esta manera.
-[^4] Estos algoritmos se detallarán más adelante.
+[^2]: Esto se puede lograr ejecutando una sycall bloqueante que espere la entrada de un humano.
+[^3]: El Planificador empezará con una serie de claves bloqueadas de esta manera.
+[^4]: Estos algoritmos se detallarán más adelante.

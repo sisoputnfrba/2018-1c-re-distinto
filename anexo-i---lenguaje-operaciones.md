@@ -44,5 +44,5 @@ En caso de que ocurra un error en la comunicación con algún proceso, se deber�
 Si la clave que se desea acceder no existe en el sistema, el ESI qué ejecutó ese pedido será abortado, se deberá generar un error informando al Usuario de dicho problema.
 
 ---
-[^16] Solo la operación GET bloquea una clave.
-[^17] Se verá durante la cursada con mayor detalle.
+[^16]: Solo la operación GET bloquea una clave.
+[^17]: Se verá durante la cursada con mayor detalle.

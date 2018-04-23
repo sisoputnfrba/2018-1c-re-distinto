@@ -59,6 +59,6 @@ Además de realizar el reordenamiento físico de los datos, es de suma importanc
 Mientras está en ejecución el proceso de Compactación y Dump, no se permitirá ejecutar operaciones en el Sistema de Re Distinto y quedarán en espera a que el proceso se complete correctamente.
 
 ---
-[^13] Se profundizará en la cursada.
-[^14] Para simplificar el manejo de referencias sólo se llevará cuenta de hace cuantas operaciones fue referenciada cada entrada, almacenando el número de ultima referencia y reemplazando el menor.
-[^15] Se profundizará en la cursada.
+[^13]: Se profundizará en la cursada.
+[^14]: Para simplificar el manejo de referencias sólo se llevará cuenta de hace cuantas operaciones fue referenciada cada entrada, almacenando el número de ultima referencia y reemplazando el menor.
+[^15]: Se profundizará en la cursada.

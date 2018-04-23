@@ -27,5 +27,5 @@ Durante la ejecución del Sistema, existe la posibilidad de que una o más Insta
 Así como las Instancias pueden dejar de estar disponibles, también pueden reincorporarse al Sistema y nuevas Instancias también pueden ser agregadas al mismo.
 
 ---
-[^11] Llegado el caso de que un algoritmo produzca un empate, se utilizará el algoritmo Equitative Load, el cual será el desempatador para todos los algoritmos de distribución.
-[^12] La letra "a" se codifica como el carácter 97 y la "z" como el 122, por lo que habrá 25 letras a ser divididas en 4 instancias, cada una con 7 letras y la última con solo 4. Cada instancia redondeará para arriba la cantidad de claves a ser usadas; y la última posiblemente tenga menos rango que aceptaría
+[^11]: Llegado el caso de que un algoritmo produzca un empate, se utilizará el algoritmo Equitative Load, el cual será el desempatador para todos los algoritmos de distribución.
+[^12]: La letra "a" se codifica como el carácter 97 y la "z" como el 122, por lo que habrá 25 letras a ser divididas en 4 instancias, cada una con 7 letras y la última con solo 4. Cada instancia redondeará para arriba la cantidad de claves a ser usadas; y la última posiblemente tenga menos rango que aceptaría
