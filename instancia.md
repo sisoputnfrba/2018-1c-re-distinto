@@ -9,7 +9,7 @@ Para esto, en cada elemento de la tabla se almacenará una clave, el número de 
 
 ## Interacción con Coordinador
 
-![Interacción con el Coordinador](/assets/interaccion-coodinador-instancia.png)
+![Interacción con el Coordinador](assets/interaccion-coordinador-instancia.png)
 
 1. El Coordinador envía una sentencia de Re Distinto a la Instancia.
 2. La Instancia procesa la sentencia con el fin de ejecutar la operación correctamente.
