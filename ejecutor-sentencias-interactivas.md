@@ -28,4 +28,4 @@ Por cada una de las sentencias interpretadas, es necesario realizar un proceso d
 | Puerto de Conexión al Planificador | [numérico] | `8001`        |
 
 ---
-[^1] Para conocer en profundidad las instrucciones ver el [Anexo I](anexo-i---lenguaje-operaciones.md).
+[^1]: Para conocer en profundidad las instrucciones ver el [Anexo I](anexo-i---lenguaje-operaciones.md).

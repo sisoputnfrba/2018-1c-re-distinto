@@ -76,7 +76,7 @@ Cabe aclarar que la finalización de un ESI libera los recursos que este tenía 
 5. El Planificador responde que esta clave se encuentra tomada, y toma nota que el ESI2 se encuentra bloqueado esperándola.
 
 ---
-[^5] Para poder distinguir qué proceso se está conectado, intercambiará mensajes con el proceso (este procedimiento se conoce como handshaking).
-[^6] Recordar que en el caso de ser un GET. No se necesita acceder a ninguna instancia.
-[^7] Esta información la obtiene al interactuar con el planificador para actualizar el estado en este último.
-[^8] Es importante tener en cuenta esto a la hora de implementar el comando "deadlock" de la consola del planificador
+[^5]: Para poder distinguir qué proceso se está conectado, intercambiará mensajes con el proceso (este procedimiento se conoce como handshaking).
+[^6]: Recordar que en el caso de ser un GET. No se necesita acceder a ninguna instancia.
+[^7]: Esta información la obtiene al interactuar con el planificador para actualizar el estado en este último.
+[^8]: Es importante tener en cuenta esto a la hora de implementar el comando "deadlock" de la consola del planificador
