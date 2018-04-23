@@ -20,9 +20,9 @@ El Coordinador recibirá desde los procesos ESI solicitudes. Además, por cada s
 
 | ESI     | Operación                       |
 |---------|---------------------------------|
-| `ESI 1` | `SET materias:K3001 “Fisica 2”` |
+| `ESI 1` | `SET materias:K3001 Fisica 2` |
 | `ESI 1` | `STORE materias:K3001`          |
-| `ESI 2` | `SET materias:K3002 “Economia”` |
+| `ESI 2` | `SET materias:K3002 Economia` |
 
 ## Interacción con ESI e Instancia
 
@@ -34,7 +34,7 @@ El Coordinador recibirá desde los procesos ESI solicitudes. Además, por cada s
 4. La instancia retorna al Coordinador
 5. El Coordinador logea la respuesta y envía al ESI
 
-En el caso que el coordinador decida en el paso 2 que la operación no puede ser ejecutada porque la instancia no existe más en el sistema, o porque el recurso al que intenta acceder se encuentra tomado[^7], le avisará al Planificador. El Planificador encolará el ESI en cuestión en una cola de bloqueados; en ambos casos haciendo referencia al recurso que se intentó obtener.
+En el caso que el coordinador decida en el paso 2 que la operación no puede ser ejecutada porque la instancia no existe más en el sistema, o porque el recurso al que intenta acceder se encuentra tomado[^7], le avisará al Planificador. El Planificador encolará el ESI en cuestión en una cola de bloqueados; en ambos casos haciendo referencia al recurso que se intentó bloquear.
 
 Es importante destacar que la operación GET no genera ningún registro dentro de la instancia, si no que solo modifica el estado de bloqueos y desbloqueos en el planificador. Es el SET el encargado de alterar el valor.
 
@@ -42,7 +42,7 @@ Es importante destacar que la operación GET no genera ningún registro dentro d
 
 El sistema de Re Distinto aplica bloqueos sobre claves utilizadas. Es decir, a medida que un ESI solicita una operación de GET sobre una clave específica, esta pasa a estar “tomada” y no puede ser tomada (GET) por ningún ESI hasta que se libere (STORE).
 
-Para lograr este comportamiento, el **Planificador** lleva un registro de qué claves fueron bloqueadas por cada `ESI` en particular. Las cuales deberá liberar en cuanto reciba una operación `STORE` con dicha clave por parte de la `ESI` bloqueadora[^8].
+Para lograr este comportamiento, el **Planificador** lleva un registro de qué claves fueron bloqueadas por cada `ESI` en particular. Las cuales deberá liberar en cuanto reciba una operación `STORE` con dicha clave por parte de la `ESI` bloqueadora[^8]. Esta liberación será de manera **FIFO**; el primer ESI que se encontraba bloqueado esperando esta clave será liberada _(Esto no quiere decir que será inmediatamente tomado por este ESI; sino que estará disponible para ser planificado; y deberá re ejecutar la operación de `GET` al ser ejecutado)_.
 
 Cabe aclarar que la finalización de un ESI libera los recursos que este tenía tomados.
 
@@ -63,7 +63,7 @@ Cabe aclarar que la finalización de un ESI libera los recursos que este tenía 
 **GET de recurso disponible:**
 
 1. El planificador envía la señal de ejecutar al ESI1
-2. El ESI1 envía al coordinador la orden de obtener la clave XX (GET XX)
+2. El ESI1 envía al coordinador la orden de bloquear la clave XX (GET XX)
 3. El Coordinador colabora con el Planificador avisando de este recurso
 4. El Planificador lleva cuenta que la clave XX está tomada por ESI1
 
@@ -71,7 +71,7 @@ Cabe aclarar que la finalización de un ESI libera los recursos que este tenía 
 
 1. _(partiendo de la situación anterior)_
 2. El planificador envía la señal de ejecutar al ESI2
-3. El ESI2 envía al coordinador la orden de obtener la clave XX (GET XX)
+3. El ESI2 envía al coordinador la orden de bloquear la clave XX (GET XX)
 4. El Coordinador colabora con el Planificador avisando de este recurso
 5. El Planificador responde que esta clave se encuentra tomada, y toma nota que el ESI2 se encuentra bloqueado esperándola.
 

@@ -9,6 +9,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 
 **Tiempo estimado**: 2 semanas
 
+**Distribución recomendada**: 5 integrantes conectando los procesos)
+
 #### Objetivos:
 
 * Familiarizarse con Linux y su consola, el entorno de desarrollo y el repositorio
@@ -25,7 +27,7 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 #### Lectura recomendada:
 
 * http://faq.utnso.com/arrancar
-* Beej Guide to Network Programming - [link](http://beej.us/guide/bgnet/output/html/multipage/index.html)
+* Beej Guide to Network Programming - [link](http://beej.us/guide/bgnet/html/multi/index.html)
 * Linux POSIX Threads - [link](http://www.yolinux.com/TUTORIALS/LinuxTutorialPosixThreads.html)
 * SO UTN FRBA Commons Libraries - [link](https://github.com/sisoputnfrba/so-commons-library)
 * Sistemas Operativos, Silberschatz, Galvin - Capítulo 3: Procesos
@@ -38,6 +40,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 **Fecha**: 19 de Mayo
 
 **Tiempo estimado**: 3 semanas
+
+**Distribución recomendada**: 1 ESI - 2 Planificador - 1 Coordinador - 1 Instancia
 
 #### Objetivos:
 
@@ -65,6 +69,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 **Fecha**: 9 de Junio
 
 **Tiempo estimado**: 3 semanas
+
+**Distribución recomendada**: 1 ESI - 2 Planificador - 1 Coordinador - 1 Instancia
 
 #### Objetivos:
 
@@ -94,6 +100,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 
 **Tiempo estimado**: 3 semanas
 
+**Distribución recomendada**: 2 Planificador - 2 Coordinador - 1 Instancia
+
 #### Objetivos:
 
 * Entender las implicancias de un algoritmo de planificación real
@@ -119,6 +127,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 **Fecha**: 14 de Julio
 
 **Tiempo estimado**: 2 semanas
+
+**Distribución recomendada**: 1 Planificador - 1 Coordinador - 1 Instancia - 2 Testing general y arreglos
 
 #### Objetivos:
 

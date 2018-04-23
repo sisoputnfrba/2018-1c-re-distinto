@@ -42,7 +42,7 @@ El algoritmo LRU se basa en llevar registro de hace cuánto fue referenciada cad
 
 ### Biggest Space Used
 
-Por último, el algoritmo BSU lleva registro de la cantidad de entradas que ocupa cada valor, y en el momento de un reemplazo, escoge aquél que ocupa más entradas.
+Por último, el algoritmo BSU lleva registro del tamaño dentro de la entrada atomica que está siendo ocupado, y en el momento de un reemplazo, escoge aquél que ocupa más espacio dentro de una entrada.
 
 ![Reemplazo BSU](assets/reemplazo-bsu.png)
 
