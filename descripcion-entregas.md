@@ -9,6 +9,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 
 **Tiempo estimado**: 2 semanas
 
+**Distribución recomendada**: 5 integrantes conectando los procesos)
+
 #### Objetivos:
 
 * Familiarizarse con Linux y su consola, el entorno de desarrollo y el repositorio
@@ -39,6 +41,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 
 **Tiempo estimado**: 3 semanas
 
+**Distribución recomendada**: 1 ESI - 2 Planificador - 1 Coordinador - 1 Instancia
+
 #### Objetivos:
 
 * Implementación de la base del Protocolo de Comunicación
@@ -65,6 +69,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 **Fecha**: 9 de Junio
 
 **Tiempo estimado**: 3 semanas
+
+**Distribución recomendada**: 1 ESI - 2 Planificador - 1 Coordinador - 1 Instancia
 
 #### Objetivos:
 
@@ -94,6 +100,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 
 **Tiempo estimado**: 3 semanas
 
+**Distribución recomendada**: 2 Planificador - 2 Coordinador - 1 Instancia
+
 #### Objetivos:
 
 * Entender las implicancias de un algoritmo de planificación real
@@ -119,6 +127,8 @@ Los checkpoints no presenciales son orientativos, y ayudan al grupo a medir el a
 **Fecha**: 14 de Julio
 
 **Tiempo estimado**: 2 semanas
+
+**Distribución recomendada**: 1 Planificador - 1 Coordinador - 1 Instancia - 2 Testing general y arreglos
 
 #### Objetivos:
 
