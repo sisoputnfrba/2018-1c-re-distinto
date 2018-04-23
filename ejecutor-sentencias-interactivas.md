@@ -8,7 +8,7 @@ Al iniciarse un Proceso ESI, éste se conectará tanto al Planificador como al C
 
 ## Parser
 
-Por cada una de las sentencias interpretadas, es necesario realizar un proceso de parseo, con el fin de traducir la cadena de caracteres en una operación entendible por el Sistema  Re Distinto. Para esto, la cátedra proveerá a los alumnos del Parser de Re Distinto, ya que la implementación del mismo no concierne a los temas de la materia.
+Por cada una de las sentencias interpretadas, es necesario realizar un proceso de parseo, con el fin de traducir la cadena de caracteres en una operación entendible por el Sistema  Re Distinto. Para esto, la cátedra proveerá a los alumnos del Parser de Re Distinto ([ParSI](https://github.com/sisoputnfrba/parsi)), ya que la implementación del mismo no concierne a los temas de la materia.
 
 ## Interacción con Coordinador y Planificador
 
