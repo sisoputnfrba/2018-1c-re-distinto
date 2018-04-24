@@ -1,6 +1,6 @@
 # Ejecutor Sentencias Interactivas (ESI)
 
-Los Procesos ESI son el punto de entrada al Sistema. Estos correrán un script con instrucciones a ser ejecutadas[^1]. Sú única función es la de interpretar de a una las líneas de un programa _(que se le pasará como argumento)_ a medida que el Planificador se lo indique. Para resolver las distintas sentencias del programa a ser interpretado; deberá colaborar con el coordinador para bloquear/liberar recursos o datos.
+Los Procesos ESI son el punto de entrada al Sistema. Estos correrán un script con instrucciones a ser ejecutadas(^1). Sú única función es la de interpretar de a una las líneas de un programa _(que se le pasará como argumento)_ a medida que el Planificador se lo indique. Para resolver las distintas sentencias del programa a ser interpretado; deberá colaborar con el coordinador para bloquear/liberar recursos o datos.
 
 ## Conexión
 
@@ -28,4 +28,4 @@ Por cada una de las sentencias interpretadas, es necesario realizar un proceso d
 | Puerto de Conexión al Planificador | [numérico] | `8001`        |
 
 ---
-[^1]: Para conocer en profundidad las instrucciones ver el [Anexo I](anexo-i---lenguaje-operaciones.md).
+^1: Para conocer en profundidad las instrucciones ver el [Anexo I](anexo-i---lenguaje-operaciones.md).

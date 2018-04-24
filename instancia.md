@@ -1,11 +1,11 @@
 # Instancia
 
-Las Instancias de Re Distinto son los procesos encargados del almacenamiento de los datos. Cada Instancia secciona su espacio de almacenamiento en lo que se denominan Entradas y al iniciar la conexión con el coordinador, se definirá el tamaño de las mismas así como la cantidad total disponible dentro de la Instancia. En la sección de almacenamiento se entrará más en detalle respecto a las Entradas.[^1]
+Las Instancias de Re Distinto son los procesos encargados del almacenamiento de los datos. Cada Instancia secciona su espacio de almacenamiento en lo que se denominan Entradas y al iniciar la conexión con el coordinador, se definirá el tamaño de las mismas así como la cantidad total disponible dentro de la Instancia. En la sección de almacenamiento se entrará más en detalle respecto a las Entradas.(^9)
 
 ## Tabla de Entradas
 
 La Tabla de Entradas es una estructura administrativa de la Instancia de Re Distinto que permite gestionar el almacenamiento y facilitar el acceso a los valores almacenados.
-Para esto, en cada elemento de la tabla se almacenará una clave, el número de entrada asociada y el tamaño del valor almacenado.[^2]
+Para esto, en cada elemento de la tabla se almacenará una clave, el número de entrada asociada y el tamaño del valor almacenado.(^9)
 
 ## Interacción con Coordinador
 
@@ -30,5 +30,6 @@ Para esto, en cada elemento de la tabla se almacenará una clave, el número de 
 | Intervalo de dump (en segundos)    | [numérico]         | `10`                        |
 
 ---
-[^9]: Para más información, investigar sobre el comando [malloc()](https://linux.die.net/man/3/malloc).
-[^10]: Dada la naturaleza de almacenamiento contiguo de los valores, en caso de que el tamaño del valor exceda el tamaño de la entrada, éste continuará en la siguiente entrada.
+^9: Para más información, investigar sobre el comando [malloc()](https://linux.die.net/man/3/malloc).
+
+^10: Dada la naturaleza de almacenamiento contiguo de los valores, en caso de que el tamaño del valor exceda el tamaño de la entrada, éste continuará en la siguiente entrada.
