@@ -25,7 +25,7 @@ A partir de estas estimaciones, el planificador podrá utilizar los siguientes a
 
 En ambos algoritmos se desconoce la próxima ráfaga, por lo que será estimada utilizando la fórmula de la media exponencial. La formula para esta estimación será la siguiente:
 
-![t_{n+1} = \alpha t_n+(1-\alpha) \tau _{n+1}\\\textup{Siendo}\\t_n \textup{ la duraci\'on de la rafaga } n\\\alpha, 0 \leq \alpha \leq 1\\\tau_n \textup{ la estimaci\'on de la rafaga } n](assets/estimacion.png)
+![\tau_{n+1} = \frac{\alpha}{100}t_n+(1-\frac{\alpha}{100}) \tau _{n}\\\textup{Siendo}\\t_n \textup{ la duraci\'on de la rafaga } n\\\alpha \in \mathbb{N}, 0 \leq \alpha \leq 100\\\tau_n \textup{ la estimaci\'on de la rafaga } n](assets/estimacion.png)
 
 La estimación inicial de todos los ESI será la misma, y deberá poder ser modificable por archivo de configuración.
 
@@ -47,7 +47,7 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 |-----------------------------------|------------------------------|----------------------------------|
 | Puerto de Escucha de conexiones   | [numérico]                   | `8000`                           |
 | Algoritmo de planificación        | `SJF-CD` / `SJF-SD` / `HRRN` | `HRRN`                           |
-| Alfa planificación                | [numérico entre 0 y 100]     | `30` (^5)                            |
+| Alfa planificación                | [numérico entre 0 y 100]     | `30`                             |
 | Estimación inicial                | [numérico]                   | `5`                              |
 | IP de Conexión al Coordinador     | [cadena]                     | `"127.0.0.1"`                    |
 | Puerto de Conexión al Coordinador | [numérico]                   | `8000`                           |
@@ -59,5 +59,3 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 ^3: El Planificador empezará con una serie de claves bloqueadas de esta manera.
 
 ^4: Estos algoritmos se detallarán más adelante.
-
-^5: Para parsear este valor de forma más sencilla, recomendamos cargarlo como un entero de 0 a 100 y dividirlo por 100 antes de usarlo, con el fin de que sea un coeficiente entre 0 y 1

@@ -34,7 +34,7 @@ El Coordinador recibirá desde los procesos ESI solicitudes. Además, por cada s
 4. La instancia retorna al Coordinador
 5. El Coordinador logea la respuesta y envía al ESI
 
-En el caso que el coordinador decida en el paso 2 que la operación no puede ser ejecutada porque la instancia no existe más en el sistema, o porque el recurso al que intenta acceder se encuentra tomado(^7), le avisará al Planificador. El Planificador encolará el ESI en cuestión en una cola de bloqueados; en ambos casos haciendo referencia al recurso que se intentó bloquear.
+En el caso que el coordinador decida en el paso 2 que la operación no puede ser ejecutada porque la instancia no existe más en el sistema, o porque el recurso al que intenta acceder se encuentra tomado(^7), le avisará al Planificador. El Planificador abortará al ESI en cuestión, y borrará la entrada trasgresora.
 
 Es importante destacar que la operación GET no genera ningún registro dentro de la instancia, si no que solo modifica el estado de bloqueos y desbloqueos en el planificador. Es el SET el encargado de alterar el valor y crear la clave, si esta no existe.
 
