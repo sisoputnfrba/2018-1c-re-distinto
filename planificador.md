@@ -38,7 +38,11 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 * desbloquear _clave_: Se desbloqueara el primer proceso ESI bloquedo por la _clave_ especificada. Solo se desbloquearán ESIs que fueron bloqueados con la consola. _Si un ESI está bloqueado esperando un recurso, no podrá ser desbloqueado de esta forma._
 * listar _recurso_: Lista los procesos encolados esperando al recurso.
 * kill _ID_: finaliza el proceso. Recordando la atomicidad mencionada en “bloquear”.
-* status _clave_: Debido a que para la correcta coordinación de las sentencias de acuerdo a los algoritmos de distribución(^4) se requiere de cierta información sobre las instancias del sistema.
+* status _clave_: Con el objetivo de conocer el estado de una clave en al momento de ejecutar este comando se deberan obtener los siguientes valores:
+    - Valor 
+    - Instancia actual 
+    - Instancia en la cual se guardaría si se hace un set (Calcular este valor mediante el algoritmo de distribución(^4))
+    - ESIs bloqueados
 * deadlock: Esta consola también permitirá analizar los deadlocks que existan en el sistema y a que ESI están asociados. Pudiendo resolverlos manualmente con la sentencia de kill previamente descrita.
 
 ## Configuración
