@@ -19,7 +19,7 @@ STORE	deportes:basquet:ginobili
 
 La clave `deportes:futbol:messi` que se encontraba tomada previamente se libera al finalizar el ESI.
 
-## Ejemplo 2 - Script que Aborta por error en el Script:
+## Ejemplo 2 - Script que Aborta por error - Error de Clave no Identificada:
 
 En este ejemplo se intenta hacer STORE de una variable no creada previamente con lo cual aborta el ESI y devuelve el error de `Error de Clave no Identificada`
 
@@ -34,7 +34,23 @@ SET deportes:basquet:ginobili Emanuel Ginobili
 ```
 Al igual que en el Ejemplo 1, al finalizar el ESI la clave `deportes:futbol:messi` se libera.
 
-## Ejemplo 3 - Script que Aborta por desconexión de la instancia:
+## Ejemplo 3 - Script que Aborta por error - Error de Clave no Bloqueada:
+
+En este ejemplo a pesar de existir la clave en el sistema se intenta hacer SET de la variable `deportes:futbol:messi` que por el STORE previo no se encuentra bloqueada con lo cual aborta el ESI y devuelve el error de `Error de Clave no Bloqueada`
+
+```
+GET deportes:futbol:messi
+SET deportes:futbol:messi Lionel Messi
+STORE   deportes:futbol:messi
+# Intento hacer store de una variable que no fue creada y por lo tanto aborta el ESI.
+SET deportes:futbol:messi El Mejor del Mundo
+# Estas instrucciones no se llegan a ejecutar.
+GET deportes:futbol:messi
+
+```
+
+
+## Ejemplo 4 - Script que Aborta por desconexión de la instancia:
 
 En este caso habra una desconexion en el medio de la ejecución y al no haber reconexion antes de que se intente ejecutar la sentencia el ESI aborta.
 A fin de simplificar la comprension del ejemplo tendremos una instancia que contendra inicialmente las claves de deportes:futbol:messi y otra que contendra inicialmente las claves de deportes:basquet:ginobili
