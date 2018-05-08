@@ -52,7 +52,7 @@ Cabe aclarar que la finalización de un ESI libera los recursos que este tenía 
 
 | Campo                           | Tipo                | Ejemplo |
 |---------------------------------|---------------------|---------|
-| Puerto de Escucha de conexiones | [numérico]          | `8000`  |
+| Puerto de Escucha de conexiones | [numérico]          | `8001`  |
 | Algoritmo de Distribución       | `LSU` / `EL` / `KE` | `EL`    |
 | Cantidad de Entradas            | [numérico]          | `20`    |
 | Tamaño de Entrada (en bytes)    | [numérico]          | `100`   |

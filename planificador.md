@@ -27,7 +27,7 @@ En ambos algoritmos se desconoce la próxima ráfaga, por lo que será estimada 
 
 ![t_{n+1} = \alpha t_n+(1-\alpha) \tau _{n+1}\\\textup{Siendo}\\t_n \textup{ la duraci\'on de la rafaga } n\\\alpha, 0 \leq \alpha \leq 1\\\tau_n \textup{ la estimaci\'on de la rafaga } n](assets/estimacion.png)
 
-La estimación inicial de todos los ESI será la misma, y deberá poder ser modificable por archivo de configuración. Ante un empate en la estimación se podrá optar por utilizar el algoritmo de FCFS (First Come First Serve)
+La estimación inicial de todos los ESI será la misma, y deberá poder ser modificable por archivo de configuración. Ante un empate en la estimación se podrá optar por utilizar el algoritmo de FCFS (First Come First Served)
 
 ## Consola del planificador
 
@@ -47,10 +47,10 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 |-----------------------------------|------------------------------|----------------------------------|
 | Puerto de Escucha de conexiones   | [numérico]                   | `8000`                           |
 | Algoritmo de planificación        | `SJF-CD` / `SJF-SD` / `HRRN` | `HRRN`                           |
-| Alfa planificación                | [numérico entre 0 y 100]     | `30` (^5)                            | 
+| Alfa planificación                | [numérico entre 0 y 100]     | `30` (^5)                        | 
 | Estimación inicial                | [numérico]                   | `5`                              |
 | IP de Conexión al Coordinador     | [cadena]                     | `"127.0.0.1"`                    |
-| Puerto de Conexión al Coordinador | [numérico]                   | `8000`                           |
+| Puerto de Conexión al Coordinador | [numérico]                   | `8001`                           |
 | Claves inicialmente bloqueadas    | [Lista de claves]            | `materias:K3002, materias:K3001` |
 
 ---
