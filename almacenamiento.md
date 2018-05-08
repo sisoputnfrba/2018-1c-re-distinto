@@ -48,7 +48,7 @@ Por último, el algoritmo BSU lleva registro del tamaño dentro de la entrada at
 
 ## Compactación
 
-Dada la naturaleza del almacenamiento en Re Distinto, existe la posibilidad de que se produzca fragmentación externa(^15), impidiendo almacenar más datos en casos en los que en realidad sí existe espacio para guardarlos. Ante éstas situaciones, Re Distinto activará automáticamente el proceso de Compactación ante dicho caso (el cual también puede ser ejecutado de forma manual con una operación). Este proceso se ejecuta internamente en cada una de las Instancias de forma simultánea; es decir, que cuando llegue el momento de realizar una Compactación, todas las Instancias realizarán dicho proceso.
+Dada la naturaleza del almacenamiento en Re Distinto, existe la posibilidad de que se produzca fragmentación externa(^15), impidiendo almacenar más datos en casos en los que en realidad sí existe espacio para guardarlos. Ante éstas situaciones, Re Distinto activará automáticamente el proceso de Compactación ante dicho caso. Este proceso se ejecuta internamente en cada una de las Instancias de forma simultánea; es decir, que cuando llegue el momento de realizar una Compactación, todas las Instancias realizarán dicho proceso.
 
 El proceso de Compactación consiste en el reordenamiento de los datos almacenados en las Entradas, de forma de eliminar los huecos de espacio libre que se generan debido a la fragmentación externa.
 

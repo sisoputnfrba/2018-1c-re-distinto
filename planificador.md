@@ -6,7 +6,7 @@ A razón de simplificar el desarrollo, la ejecución de cada línea de código _
 
 En caso de que un proceso ESI no pueda seguir ejecutando debido a un bloqueo, deberá ser enviado a la cola de proceso bloqueados, esperando a que quien bloqueó la key utilice un _store_ y libere la misma.
 
-Por otro lado, en el caso de que el ESI haga una operación de GET sobre un recurso libre, no deberá moverse del estado de ejecución ni ser re-planificado.
+Por otro lado, en el caso de que el ESI haga una operación de GET sobre un recurso libre, no deberá moverse del estado de ejecución ni ser re-planificado (a menos que el algoritmo del planificador así lo indique).
 
 Una vez finalizado el proceso ESI, se lo enviará a una cola de _finalizados_.
 
@@ -25,7 +25,7 @@ A partir de estas estimaciones, el planificador podrá utilizar los siguientes a
 
 En ambos algoritmos se desconoce la próxima ráfaga, por lo que será estimada utilizando la fórmula de la media exponencial. La formula para esta estimación será la siguiente:
 
-![t_{n+1} = \alpha t_n+(1-\alpha) \tau _{n+1}\\\textup{Siendo}\\t_n \textup{ la duraci\'on de la rafaga } n\\\alpha, 0 \leq \alpha \leq 100\\\tau_n \textup{ la estimaci\'on de la rafaga } n](assets/estimacion.png)
+![\tau_{n+1} = \frac{\alpha}{100}t_n+(1-\frac{\alpha}{100}) \tau _{n}\\\textup{Siendo}\\t_n \textup{ la duraci\'on de la rafaga } n\\\alpha \in \mathbb{N}, 0 \leq \alpha \leq 100\\\tau_n \textup{ la estimaci\'on de la rafaga } n](assets/estimacion.png)
 
 La estimación inicial de todos los ESI será la misma, y deberá poder ser modificable por archivo de configuración.
 
@@ -35,7 +35,7 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 
 * Pausar/Continuar planificación(^2): El Planificador no le dará nuevas órdenes de ejecución a ningún ESI mientras se encuentre pausado.
 * bloquear _clave ID_: Se bloqueará el proceso ESI hasta ser desbloqueado _(ver más adelante)_, especificado por dicho _ID_(^3) en la cola del recurso _clave_. _Vale recordar que cada línea del script a ejecutar es atómica, y no podrá ser interrumpida; si no que se bloqueará en la próxima oportunidad posible. Solo se podrán bloquear de esta manera ESIs que estén en el estado de listo o ejecutando._
-* desbloquear _clave_: Se desbloqueara el primer proceso ESI bloquedo por la _clave_ especificada. Solo se bloqueará ESIs que fueron bloqueados con la consola. _Si un ESI está bloqueado esperando un recurso, no podrá ser desbloqueado de esta forma._
+* desbloquear _clave_: Se desbloqueara el primer proceso ESI bloquedo por la _clave_ especificada. Solo se desbloquearán ESIs que fueron bloqueados con la consola. _Si un ESI está bloqueado esperando un recurso, no podrá ser desbloqueado de esta forma._
 * listar _recurso_: Lista los procesos encolados esperando al recurso.
 * kill _ID_: finaliza el proceso. Recordando la atomicidad mencionada en “bloquear”.
 * status _clave_: Debido a que para la correcta coordinación de las sentencias de acuerdo a los algoritmos de distribución(^4) se requiere de cierta información sobre las instancias del sistema.
