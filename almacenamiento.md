@@ -61,6 +61,6 @@ Mientras está en ejecución el proceso de Compactación y Dump, no se permitir�
 ---
 ^16: Se profundizará en la cursada.
 
-^17: Para simplificar el manejo de referencias sólo se llevará cuenta de hace cuantas operaciones fue referenciada cada entrada, almacenando el número de ultima referencia y reemplazando el menor.
+^17: Para simplificar el manejo de referencias sólo se llevará cuenta de hace cuantas operaciones fue referenciada cada entrada, almacenando el número de ultima referencia y reemplazando el menor. Esto solo sera efectivo si se accedió a la instancia (SET y STORE), caso contrario no afectara el calculo del algoritmo.
 
 ^18: Se profundizará en la cursada.

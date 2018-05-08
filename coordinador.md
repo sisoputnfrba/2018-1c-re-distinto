@@ -31,10 +31,10 @@ El Coordinador recibirá desde los procesos ESI solicitudes. Además, por cada s
 1. El Coordinador recibe una solicitud proveniente de un proceso ESI.
 2. El Coordinador procesa la solicitud con el fin de determinar la Instancia a la que se le asignará la solicitud(^8).
 3. Se elige la Instancia asociada y se le envía la solicitud.
-4. La instancia retorna al Coordinador
-5. El Coordinador logea la respuesta y envía al ESI
+4. La instancia retorna al Coordinador.
+5. El Coordinador logea la respuesta y envía al ESI.
 
-En el caso que el coordinador decida en el paso 2 que la operación no puede ser ejecutada porque la instancia no existe más en el sistema, o porque el recurso al que intenta acceder se encuentra tomado(^9), le avisará al Planificador. El Planificador abortará al ESI en cuestión, y borrará la entrada trasgresora.
+En el caso que el coordinador decida en el paso 2 que la operación no puede ser ejecutada porque la instancia no existe más en el sistema(^9), le avisará al Planificador, el Planificador abortará al ESI en cuestión. No se deberán tomar acciones sobre los ESIs bloqueados para dicha clave ya que la instancia puede reincorporarse en el sistema a futuro.
 
 Es importante destacar que la operación GET generará una clave sin valor y ademas modifica el estado de bloqueos y desbloqueos en el planificador. Es el SET el encargado de alterar el valor.
 
@@ -79,9 +79,9 @@ Cabe aclarar que la finalización de un ESI libera los recursos que este tenía 
 
 ^7: Para poder distinguir qué proceso se está conectado, intercambiará mensajes con el proceso (este procedimiento se conoce como handshaking).
 
-^8: Recordar que en el caso de ser un GET. No se necesita acceder a ninguna instancia.
+^8: Eso varia segun si es una nueva entrada (GET) o si tiene que acceder a una entrada existente (SET o STORE)
 
-^9: Esta información la obtiene al interactuar con el planificador para actualizar el estado en este último.
+^9: Esta información la sabe el coordinador ya que recibe las desconexiones de las entidades o puede consultarle a las entidades al momento de hacer la comprobación.
 
 ^10: Es importante tener en cuenta esto a la hora de implementar el comando "deadlock" de la consola del planificador
 
