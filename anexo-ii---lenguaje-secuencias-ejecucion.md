@@ -46,9 +46,9 @@ STORE   deportes:futbol:messi
 SET deportes:futbol:messi El Mejor del Mundo
 # Estas instrucciones no se llegan a ejecutar.
 GET deportes:futbol:messi
-
+STORE deportes:futbol:messi
 ```
-
+En este ejemplo queda de manifiesto que el orden de ejecución correcto deberia ser GET - SET (1 o varios) - STORE, y que cualquier otra variación genera un error ya sea de clave no bloqueada o de clave no identificada.
 
 ## Ejemplo 4 - Script que Aborta por desconexión de la instancia:
 
