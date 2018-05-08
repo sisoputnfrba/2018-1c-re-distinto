@@ -42,7 +42,7 @@ En este ejemplo a pesar de existir la clave en el sistema se intenta hacer SET d
 GET deportes:futbol:messi
 SET deportes:futbol:messi Lionel Messi
 STORE   deportes:futbol:messi
-# Intento hacer set de una variable que no fue creada y por lo tanto aborta el ESI.
+# Intento hacer set de una variable que no se encuentra bloqueada y por lo tanto aborta el ESI.
 SET deportes:futbol:messi El Mejor del Mundo
 # Estas instrucciones no se llegan a ejecutar.
 GET deportes:futbol:messi
