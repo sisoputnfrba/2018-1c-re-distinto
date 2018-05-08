@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: billryan/gitbook
+    steps:
+      - checkout
+      - run:
+          name: Create artifacts directory
+          command: mkdir -p /root/project/artifacts/
+      - run:
+          name: Export PDF
+          command: gitbook pdf . artifacts/2018-1C-TP-ReDisitnto-$(git rev-parse --short HEAD).pdf
+      - run:
+          name: Export EPUB
+          command: gitbook epub . artifacts/2018-1C-TP-ReDisitnto-$(git rev-parse --short HEAD).epub
+      - run:
+          name: Export Mobi
+          command: gitbook mobi . artifacts/2018-1C-TP-ReDisitnto-$(git rev-parse --short HEAD).mobi
+      - store_artifacts:
+          path: /root/project/artifacts/
