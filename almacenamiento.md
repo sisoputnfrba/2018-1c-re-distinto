@@ -4,7 +4,7 @@ El almacenamiento en cada Instancia está definido por una cantidad determinada 
 
 ## Dump
 
-Cada determinado intervalo (por archivo de configuración) la instancia almacenará las claves y sus valores en el punto de montaje. La forma de guardarlo será archivo de texto simple, cuyo nombre será el nombre de la clave, y su contenido el valor. Esta información deberá ser recuperada al momento de iniciar una instancia.
+Cada determinado intervalo (por archivo de configuración) la instancia almacenará las claves y sus valores en el punto de montaje. La forma de guardarlo será archivo de texto simple, cuyo nombre será el nombre de la clave, y su contenido el valor (independientemente de si ocupan 1 o más entradas). Esta información deberá ser recuperada al momento de iniciar una instancia.
 
 ## Entrada
 
@@ -16,7 +16,7 @@ Las claves se conformarán por cadenas de hasta 40 caracteres.
 
 ## Valor
 
-El valor almacenado para cada key será de tamaño variable, dando lugar a la posibilidad de que un valor ocupe más de una sola entrada en la Instancia de Re Distinto. Otros casos posibles que surgen por la naturaleza variable del valor son aquellos casos en los que el valor tiene menor tamaño que una Entrada; en este caso, se produce fragmentación interna(^13) en esta Entrada.
+El valor almacenado para cada key será de tamaño variable, dando lugar a la posibilidad de que un valor ocupe más de una sola entrada en la Instancia de Re Distinto. Otros casos posibles que surgen por la naturaleza variable del valor son aquellos casos en los que el valor tiene menor tamaño que una Entrada; en este caso, se produce fragmentación interna(^16) en esta Entrada.
 
 ## Valor Atómico
 
@@ -36,7 +36,7 @@ El algoritmo Circular consiste en tener un puntero sobre las entradas de almacen
 
 ### Least Recently Used
 
-El algoritmo LRU se basa en llevar registro de hace cuánto fue referenciada cada entrada. Llegado el momento de reemplazar una entrada, se selecciona aquella entrada que ha sido referenciada hace mayor tiempo(^14).
+El algoritmo LRU se basa en llevar registro de hace cuánto fue referenciada cada entrada. Llegado el momento de reemplazar una entrada, se selecciona aquella entrada que ha sido referenciada hace mayor tiempo(^17).
 
 ![Reemplazo LRU](assets/reemplazo-lru.png)
 
@@ -48,7 +48,7 @@ Por último, el algoritmo BSU lleva registro del tamaño dentro de la entrada at
 
 ## Compactación
 
-Dada la naturaleza del almacenamiento en Re Distinto, existe la posibilidad de que se produzca fragmentación externa(^15), impidiendo almacenar más datos en casos en los que en realidad sí existe espacio para guardarlos. Ante éstas situaciones, Re Distinto activará automáticamente el proceso de Compactación ante dicho caso (el cual también puede ser ejecutado de forma manual con una operación). Este proceso se ejecuta internamente en cada una de las Instancias de forma simultánea; es decir, que cuando llegue el momento de realizar una Compactación, todas las Instancias realizarán dicho proceso.
+Dada la naturaleza del almacenamiento en Re Distinto, existe la posibilidad de que se produzca fragmentación externa(^18), impidiendo almacenar más datos en casos en los que en realidad sí existe espacio para guardarlos. Ante éstas situaciones, Re Distinto activará automáticamente el proceso de Compactación ante dicho caso. Este proceso se ejecuta internamente en cada una de las Instancias de forma simultánea; es decir, que cuando llegue el momento de realizar una Compactación, todas las Instancias realizarán dicho proceso. 
 
 El proceso de Compactación consiste en el reordenamiento de los datos almacenados en las Entradas, de forma de eliminar los huecos de espacio libre que se generan debido a la fragmentación externa.
 
@@ -59,8 +59,8 @@ Además de realizar el reordenamiento físico de los datos, es de suma importanc
 Mientras está en ejecución el proceso de Compactación y Dump, no se permitirá ejecutar operaciones en el Sistema de Re Distinto y quedarán en espera a que el proceso se complete correctamente.
 
 ---
-^13: Se profundizará en la cursada.
+^16: Se profundizará en la cursada.
 
-^14: Para simplificar el manejo de referencias sólo se llevará cuenta de hace cuantas operaciones fue referenciada cada entrada, almacenando el número de ultima referencia y reemplazando el menor.
+^17: Para simplificar el manejo de referencias sólo se llevará cuenta de hace cuantas operaciones fue referenciada cada entrada, almacenando el número de ultima referencia y reemplazando el menor.
 
-^15: Se profundizará en la cursada.
+^18: Se profundizará en la cursada.
