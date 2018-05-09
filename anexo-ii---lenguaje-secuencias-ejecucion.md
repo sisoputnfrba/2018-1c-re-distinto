@@ -1,7 +1,8 @@
 # Anexo II: Lenguaje - Secuencias de Ejecución
 
-En este anexo veremos casos de ejecución de scripts y los resultados que deberian tener en cada caso a fin de ser mas explicitos en cuanto a la forma que se desea que se comporte el sistema.
-En todos los casos se considera que el script es el único que ejecuta en el sistema.
+En este anexo veremos casos de ejecución de scripts y los resultados que deberian tener en cada caso a fin de ser mas explicitos en cuanto a la forma que se desea que se comporte el sistema.    
+En todos los casos se considera que el script es el único que ejecuta en el sistema.    
+Los scripts que se proporcionaran al momento de las pruebas no contentran errores que no se encuentren tipificados en el listado
 
 ## Ejemplo 1 - Script que finaliza OK:
 
@@ -9,10 +10,18 @@ Este es el mismo ejemplo que se encuentra en el Anexo I, es por esto que vamos a
 Dado que el orden de las sentencias siempre es el correcto, el script finaliza sin inconvenientes.
 
 ```
+# Se crea la clave deportes:futbol:messi en la tabla de claves del coordinador
 GET deportes:futbol:messi
+
+# Se crea finalmente la clave deportes:futbol:messi en la instancia y se graba el valor Lionel Messi
 SET deportes:futbol:messi Lionel Messi
+
+# Se crea la clave deportes:basquet:ginobili en la tabla de claves del coordinador
 GET deportes:basquet:ginobili
+
+# Se crea finalmente la clave deportes:basquet:ginobili en la instancia y se graba el valor Emanuel Ginobili
 SET deportes:basquet:ginobili Emanuel Ginobili
+
 # Persiste el dato de la instancia y libera esta clave, no da error ya que la misma existe.
 STORE	deportes:basquet:ginobili
 ```

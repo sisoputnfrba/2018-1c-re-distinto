@@ -38,7 +38,7 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 * desbloquear _clave_: Se desbloqueara el primer proceso ESI bloquedo por la _clave_ especificada.
 * listar _recurso_: Lista los procesos encolados esperando al recurso.
 * kill _ID_: finaliza el proceso. Recordando la atomicidad mencionada en “bloquear”. Al momento de eliminar el ESI, se debloquearan las claves que tenga tomadas.
-* status _clave_: Con el objetivo de conocer el estado de una clave y de probar la correcta distribución de las mismas se deberan obtener los siguientes valores:
+* status _clave_: Con el objetivo de conocer el estado de una clave y de probar la correcta distribución de las mismas se deberan obtener los siguientes valores: (Este comando se utilizara para probar el sistema)
     - Valor, en caso de no poseer valor un mensaje que lo indique.
     - Instancia actual en la cual se encuentra la clave. (En caso de que la clave no exista, la Instancia actual debería )
     - Instancia en la cual se guardaría actualmente la clave (Calcular este valor mediante el algoritmo de distribución(^4), pero sin afectar la distribución actual de las claves).

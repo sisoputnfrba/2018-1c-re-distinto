@@ -42,7 +42,7 @@ Es importante destacar que la operación GET generará una clave sin valor y ade
 
 El sistema de Re Distinto aplica bloqueos sobre claves utilizadas. Es decir, a medida que un ESI solicita una operación de GET sobre una clave específica, esta pasa a estar “tomada” y no puede ser tomada (GET) por ningún ESI hasta que se libere (STORE).
 
-Para lograr este comportamiento, el **Planificador** lleva un registro de qué claves fueron bloqueadas por cada `ESI` en particular. Las cuales deberá liberar en cuanto reciba una operación `STORE` con dicha clave por parte de la `ESI` bloqueadora(^10). Esta liberación será de manera **FIFO**; el primer ESI que se encontraba bloqueado esperando esta clave será liberada _(Esto no quiere decir que será inmediatamente tomado por este ESI; sino que estará disponible para ser planificado; y deberá re ejecutar la operación de `GET` al ser ejecutado)_(^11).
+Para lograr este comportamiento, el **Planificador** lleva un registro de qué claves fueron bloqueadas por cada `ESI` en particular, las cuales deberá liberar en cuanto reciba una operación `STORE` con dicha clave por parte de la `ESI` bloqueadora(^10). Esta liberación será de manera **FIFO**; el primer ESI que se encontraba bloqueado esperando esta clave será liberada _(Esto no quiere decir que será inmediatamente tomado por este ESI; sino que estará disponible para ser planificado; y deberá re ejecutar la operación de `GET` al ser ejecutado)_(^11).
 
 Cabe aclarar que la finalización de un ESI libera los recursos que este tenía tomados.
 
@@ -77,7 +77,7 @@ Cabe aclarar que la finalización de un ESI libera los recursos que este tenía 
 
 ---
 
-^7: Para poder distinguir qué proceso se está conectado, intercambiará mensajes con el proceso (este procedimiento se conoce como handshaking).
+^7: Para poder distinguir qué proceso se está conectando, intercambiará mensajes con el proceso (este procedimiento se conoce como handshaking).
 
 ^8: Eso varia segun si es una nueva entrada (GET) o si tiene que acceder a una entrada existente (SET o STORE)
 
