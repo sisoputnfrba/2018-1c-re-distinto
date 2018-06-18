@@ -5,7 +5,7 @@
 * `STORE clave`: Persiste el valor de la clave asociada en un archivo dentro de la Instancia. Por cada clave persistida se generará un archivo particular conteniendo el valor en texto plano.
 
 ## Aclaraciones importantes sobre las operaciones
-`SET`: En caso de que la clave cuente previamente con un valor, el comando SET no podra hacer que se ocupen mas entradas (puede ocupar mas espacio hasta llenar las entradas actualmente asignadas), pero si podra hacer que se reduzca la cantidad de entradas utilizadas, es decir, que el SET puede liberar entradas ocupadas por la clave al achicar el valor.
+`SET`: En caso de que la clave cuente previamente con un valor, el comando SET no podra hacer que se ocupen mas entradas (puede ocupar mas espacio hasta llenar las entradas actualmente asignadas), pero si podra hacer que se reduzca la cantidad de entradas utilizadas, es decir, que el SET puede liberar entradas ocupadas por la clave al achicar el valor.    
 `STORE`: La operación STORE no elimina ninguna entrada de las instancias ni las marca como vacías, solamente baja al archivo el valor y libera la clave en el planificador.
 
 ## Blocking
