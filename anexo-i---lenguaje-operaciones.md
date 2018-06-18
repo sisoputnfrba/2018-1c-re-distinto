@@ -1,8 +1,12 @@
 # Anexo I: Lenguaje - Operaciones
 
 * `GET clave`: Intenta bloquear el valor de la clave asociada. Si la clave no existe la crea y la bloquea.
-* `SET clave valor`: Almacena el valor con la clave asociada. La clave debera estar previamente tomada por el ESI que intenta hacer el SET.
-* `STORE clave`: Persiste el valor de la clave asociada en un archivo dentro de la Instancia. Por cada clave persistida se generará un archivo particular conteniendo el valor en texto plano. Esta operación también debe liberar el bloqueo sobre la clave.
+* `SET clave valor`: Almacena el valor con la clave asociada. La clave debera estar previamente tomada por el ESI que intenta hacer el SET. 
+* `STORE clave`: Persiste el valor de la clave asociada en un archivo dentro de la Instancia. Por cada clave persistida se generará un archivo particular conteniendo el valor en texto plano.
+
+## Aclaraciones importantes sobre las operaciones
+`SET`: En caso de que la clave cuente previamente con un valor, el comando SET no podra hacer que se ocupen mas entradas (puede ocupar mas espacio hasta llenar las entradas actualmente asignadas), pero si podra hacer que se reduzca la cantidad de entradas utilizadas, es decir, que el SET puede liberar entradas ocupadas por la clave al achicar el valor.
+`STORE`: La operación STORE no elimina ninguna entrada de las instancias ni las marca como vacías, solamente baja al archivo el valor y libera la clave en el planificador.
 
 ## Blocking
 

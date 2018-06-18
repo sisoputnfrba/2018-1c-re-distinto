@@ -35,12 +35,12 @@ Mediante una consola, el planificador deberá facilitar al usuario las siguiente
 
 * Pausar/Continuar planificación(^2): El Planificador no le dará nuevas órdenes de ejecución a ningún ESI mientras se encuentre pausado.
 * bloquear _clave ID_: Se bloqueará el proceso ESI hasta ser desbloqueado _(ver más adelante)_, especificado por dicho _ID_(^3) en la cola del recurso _clave_. _Vale recordar que cada línea del script a ejecutar es atómica, y no podrá ser interrumpida; si no que se bloqueará en la próxima oportunidad posible. Solo se podrán bloquear de esta manera ESIs que estén en el estado de listo o ejecutando._
-* desbloquear _clave_: Se desbloqueara el primer proceso ESI bloquedo por la _clave_ especificada.
+* desbloquear _clave_: Se desbloqueara el primer proceso ESI bloquedo por la _clave_ especificada, en caso de que no queden mas procesos bloqueados se debera liberar la clave.
 * listar _recurso_: Lista los procesos encolados esperando al recurso.
 * kill _ID_: finaliza el proceso. Recordando la atomicidad mencionada en “bloquear”. Al momento de eliminar el ESI, se debloquearan las claves que tenga tomadas.
 * status _clave_: Con el objetivo de conocer el estado de una clave y de probar la correcta distribución de las mismas se deberan obtener los siguientes valores: (Este comando se utilizara para probar el sistema)
     - Valor, en caso de no poseer valor un mensaje que lo indique.
-    - Instancia actual en la cual se encuentra la clave. (En caso de que la clave no exista, la Instancia actual debería )
+    - Instancia actual en la cual se encuentra la clave. (En caso de que la clave no se encuentre en una instancia, no se debe mostrar este valor)
     - Instancia en la cual se guardaría actualmente la clave (Calcular este valor mediante el algoritmo de distribución(^4), pero sin afectar la distribución actual de las claves).
     - ESIs bloqueados a la espera de dicha clave.
 * deadlock: Esta consola también permitirá analizar los deadlocks que existan en el sistema y a que ESI están asociados. Pudiendo resolverlos manualmente con la sentencia de kill previamente descrita.
