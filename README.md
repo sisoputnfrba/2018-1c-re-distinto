@@ -1,3 +1,4 @@
-# Re Distinto
+# Introduction
 
-![Re Distinto](assets/logo.png)
+![Re Distinto](.gitbook/assets/logo.png)
+
