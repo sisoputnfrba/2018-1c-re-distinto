@@ -138,7 +138,7 @@ Los checkpoints se dividen entre "Presenciales" y "No presenciales". Este trabaj
 * Sistemas Operativos, Silberschatz, Galvin - Capítulo 6: Deadlock
 * Sistemas Operativos, Silberschatz, Galvin - Capítulo 10 y 11: File System
 
-**Segunda fecha de entrega**: 28 de Julio
+**Segunda fecha de entrega**: 21 de Julio
 
 **Última fecha de entrega**: 4 de Agosto
 
